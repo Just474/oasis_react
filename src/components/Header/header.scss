@@ -1,0 +1,188 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 50px;
+  width: 100%;
+  height: 70px;
+
+  .container-logo {
+    display: flex;
+    max-width: 100px;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    img {
+      max-width: 30px;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    width: 80%;
+    border-bottom: var(--color-primary) 3px solid;
+    position: relative;
+
+    nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .container-auth {
+      display: flex;
+      gap: 30px;
+      position: relative;
+
+      .dropdown {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background: white;
+        border: 1px solid var(--border-color);
+        box-shadow: var(--box-shadow);
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 100;
+      }
+    }
+  }
+}
+
+/* Бургер */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+
+  span {
+    width: 25px;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+  }
+}
+
+/* Мобильные auth ссылки */
+
+.mobile-auth {
+  display: none;
+}
+
+/* Адаптив */
+
+@media (max-width: 1600px) {
+  header {
+    padding: 5px 0;
+
+    .container {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  header {
+    padding: 5px 0;
+
+    .container {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    .container {
+
+      .container-auth {
+        gap: 5px;
+      }
+
+      nav {
+        gap: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 10px 15px;
+    height: auto;
+
+    .container {
+
+      nav {
+        position: absolute;
+        top: 55px;
+        left: 0;
+
+        width: 100%;
+        background: white;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        padding: 20px 0;
+
+        border-radius: 10px;
+        border: 1px solid var(--border-color);
+        box-shadow: var(--box-shadow);
+
+        display: none;
+        z-index: 99;
+
+        &.active {
+          display: flex;
+        }
+
+        .mobile-auth {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+      }
+
+      .burger {
+        display: flex;
+      }
+
+      .desktop-profile {
+        display: none;
+      }
+    }
+  }
+}
+

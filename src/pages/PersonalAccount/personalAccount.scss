@@ -1,0 +1,306 @@
+// ─── Секции ───────────────────────────────────────────────────────────────────
+
+.profile-section,
+.bookings-section {
+  margin-bottom: 32px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+
+  h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  .section-icon {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+}
+
+// ─── Профиль ──────────────────────────────────────────────────────────────────
+
+.container-personal {
+  width: 100%;
+}
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.element-personal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    opacity: 0.7;
+  }
+
+  .value {
+    font-size: 1rem;
+    color: #1a1a1a;
+    font-weight: 500;
+  }
+
+  &.email-status {
+    grid-column: span 2;
+
+    @media (max-width: 600px) {
+      grid-column: span 1;
+    }
+  }
+}
+
+.unverified-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+// ─── Бэджи ────────────────────────────────────────────────────────────────────
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  &--verified {
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  &--unverified {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+
+  &--status {
+    white-space: nowrap;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    &.pending {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    &.paid {
+      background: #d1fae5;
+      color: #065f46;
+    }
+
+    &.failed {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+  }
+}
+
+// ─── Карточки бронирований ────────────────────────────────────────────────────
+
+.container-booking {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.element-booking {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 20px;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+
+  .booking-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .booking-address {
+      font-size: 0.82rem;
+      color: #6b7280;
+    }
+  }
+}
+
+.booking-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background: #f9fafb;
+  border-radius: 10px;
+  flex-wrap: wrap;
+
+  .detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    .detail-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-primary);
+      opacity: 0.65;
+    }
+
+    .detail-value {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a1a1a;
+
+      &.price {
+        font-size: 1.05rem;
+        color: var(--color-primary);
+      }
+    }
+
+    &--price {
+      margin-left: auto;
+
+      @media (max-width: 480px) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .detail-divider {
+    font-size: 1rem;
+    color: #9ca3af;
+    font-weight: 300;
+    align-self: flex-end;
+    padding-bottom: 2px;
+  }
+}
+
+.booking-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 4px;
+  border-top: 1px solid #f0f0f0;
+  flex-wrap: wrap;
+
+  .cancel-hint {
+    font-size: 0.78rem;
+    color: #9ca3af;
+  }
+}
+
+// ─── Пустое состояние ─────────────────────────────────────────────────────────
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 48px 0;
+  color: #9ca3af;
+
+  .empty-icon {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+// ─── Адаптив ──────────────────────────────────────────────────────────────────
+
+@media (max-width: 768px) {
+  .booking-header {
+    flex-direction: column;
+
+    .badge--status {
+      align-self: flex-start;
+    }
+  }
+
+  .booking-details {
+    gap: 12px;
+
+    .detail-item--price {
+      margin-left: 0;
+    }
+  }
+
+  .booking-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+.pending{
+  color:#E0A800 ;
+}
+.paid{
+  color: #198754;
+}
+.failed{
+  color: #dc3545;
+}

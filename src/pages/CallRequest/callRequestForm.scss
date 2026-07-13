@@ -1,0 +1,205 @@
+/* ── Wrapper ───────────────────────────────────────────── */
+.callback-form-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  padding: 28px 32px 32px;
+  max-width: 480px;
+  width: 100%;
+form{
+  border: none;
+  box-shadow: none;
+}
+}
+
+/* ── Header ────────────────────────────────────────────── */
+.callback-form-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.callback-form-header__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(5, 135, 233, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.callback-form-header__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--main-text);
+  margin: 0 0 2px;
+}
+
+.callback-form-header__sub {
+  font-size: 0.82rem;
+  color: var(--text-grey);
+  margin: 0;
+}
+
+/* ── Form ──────────────────────────────────────────────── */
+
+.callback-form__error-banner {
+  background: rgba(220, 53, 69, 0.08);
+  border: 1px solid var(--errors-color);
+  color: var(--errors-color);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+}
+
+/* ── Input containers (match project style) ────────────── */
+
+
+
+
+.container-input input,
+.container-input textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--main-text);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-sizing: border-box;
+  resize: none;
+  font-family: inherit;
+}
+
+.container-input input:focus,
+.container-input textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(5, 135, 233, 0.12);
+}
+
+.container-input input.input-error,
+.container-input textarea.input-error {
+  border-color: var(--errors-color);
+}
+
+.container-input--error input,
+.container-input--error textarea {
+  border-color: var(--errors-color);
+}
+
+.container-input__error {
+  font-size: 0.78rem;
+  color: var(--errors-color);
+  margin-top: 2px;
+}
+
+/* ── Time slots ────────────────────────────────────────── */
+.callback-form__time-slots {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.time-slot {
+  padding: 7px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  background: transparent;
+  font-size: 0.85rem;
+  color: var(--main-text);
+  cursor: pointer;
+  transition: border-color 0.18s, background 0.18s, color 0.18s;
+  white-space: nowrap;
+}
+
+.time-slot:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.time-slot--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.time-slot--active:hover{
+  color:#fff;
+}
+
+/* ── Submit ────────────────────────────────────────────── */
+
+.callback-form__submit:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.callback-form__submit:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.callback-form__submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.callback-form__spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Success state ─────────────────────────────────────── */
+.callback-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  max-width: 480px;
+  width: 100%;
+}
+
+.callback-success__icon {
+  margin-bottom: 16px;
+}
+
+.callback-success__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--main-text);
+  margin: 0 0 8px;
+}
+
+.callback-success__text {
+  font-size: 0.9rem;
+  color: var(--text-grey);
+  margin: 0 0 24px;
+}
+
+.dark{
+  color: #000000;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 520px) {
+  .callback-form-wrapper,
+  .callback-success {
+    padding: 20px 16px 24px;
+  }
+}

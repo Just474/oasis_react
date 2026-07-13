@@ -1,0 +1,26 @@
+User-agent: *
+
+# Разрешаем основные страницы
+Allow: /
+Allow: /aboutUs
+Allow: /faqs
+Allow: /rules
+Allow: /privacy-policy
+Allow: /apartments/
+
+# Запрещаем служебные и приватные разделы
+Disallow: /admin
+Disallow: /profile
+Disallow: /login
+Disallow: /register
+Disallow: /verify-email
+
+# Если Laravel API находится на этом же домене
+Disallow: /api
+
+# Если есть storage/debug маршруты
+Disallow: /storage
+Disallow: /debugbar
+
+# Sitemap
+Sitemap: https://your-domain.com/sitemap.xml

@@ -1,0 +1,50 @@
+.rules-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.rules-header {
+  background: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.rules-content {
+  padding: 25px 35px;
+  line-height: 1.65;
+  color: black;
+}
+
+.rules-content ol {
+  padding-left: 0;
+  margin: 0;
+  counter-reset: rule-counter;
+}
+
+.rules-content li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+  font-size: 15.5px;
+}
+
+.rules-content li:before {
+  counter-increment: rule-counter;
+  content: counter(rule-counter) ".";
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.rules-content strong {
+  color: var(--color-primary);
+}

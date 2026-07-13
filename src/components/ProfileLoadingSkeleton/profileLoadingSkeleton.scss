@@ -1,0 +1,84 @@
+.skeleton {
+  .skeleton-line,
+  .skeleton-badge,
+  .skeleton-button {
+    position: relative;
+    overflow: hidden;
+    background: #ececec;
+    border-radius: 8px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(
+                      90deg,
+                      transparent,
+                      rgba(255,255,255,.7),
+                      transparent
+      );
+      animation: shimmer 1.3s infinite;
+    }
+  }
+
+  .title {
+    width: 220px;
+    height: 30px;
+  }
+
+  .label {
+    width: 80px;
+    height: 12px;
+  }
+
+  .value {
+    width: 140px;
+    height: 18px;
+  }
+
+  .booking-name {
+    width: 220px;
+    height: 20px;
+  }
+
+  .booking-address {
+    width: 280px;
+    height: 14px;
+    margin-top: 8px;
+  }
+
+  .detail-label {
+    width: 70px;
+    height: 12px;
+    margin-bottom: 8px;
+  }
+
+  .detail-value {
+    width: 90px;
+    height: 18px;
+  }
+
+  .price {
+    width: 80px;
+    height: 20px;
+  }
+
+  .skeleton-badge {
+    width: 100px;
+    height: 28px;
+    border-radius: 20px;
+  }
+
+  .skeleton-button {
+    width: 190px;
+    height: 42px;
+    border-radius: 10px;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

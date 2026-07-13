@@ -1,0 +1,70 @@
+.skeleton {
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  animation: skeleton-pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-image {
+  width: 550px;
+  height: 245px;
+  border-radius: 20px;
+}
+
+.skeleton-title {
+  width: 65%;
+  height: 28px;
+}
+
+.skeleton-text {
+  width: 55%;
+  height: 18px;
+  margin-bottom: 8px;
+}
+
+.skeleton-text.address {
+  width: 45%;
+}
+
+.skeleton-text-small {
+  width: 70px;
+  height: 18px;
+}
+
+.skeleton-mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skeleton-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-line {
+  width: 100%;
+  height: 16px;
+}
+
+.skeleton-line.short {
+  width: 75%;
+}
+
+.skeleton-price {
+  width: 160px;
+  height: 32px;
+}
+
+.skeleton-button {
+  width: 140px;
+  height: 48px;
+  border-radius: 9999px;
+}
+
+/* Анимация пульсации */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

@@ -1,0 +1,12 @@
+.container--load-more{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width:100%;
+  text-align: center;
+  margin: 40px 0 60px;
+
+  .btn{
+    padding: 20px;
+  }
+}

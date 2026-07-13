@@ -1,0 +1,43 @@
+@use './styles/global.scss' as global;
+@use './styles/variables.scss' as variables;
+@use './layouts/layout.scss' as layout;
+
+@use 'components/LoadingSkeleton/loadingSkeleton' as loadingAnimation;
+@use 'components/ApartmentSkeleton/ApartmentSkeleton' as AprtmentSkeleton;
+@use 'components/ProfileLoadingSkeleton/profileLoadingSkeleton' as ProfileSkeleton;
+
+
+
+@use 'components/Header/header.scss' as header;
+@use 'components/Footer/footer.scss' as footer;
+
+
+@use './styles/form.scss' as form;
+@use './styles/btns.scss' as btns;
+
+@use 'pages/Admin/admin.scss' as admin;
+@use 'pages/PersonalAccount/personalAccount' as personalAccount;
+@use 'pages/Apartment/UpdateApartments/updateApartments.scss' as updateApartment;
+@use 'pages/Rules/rules.scss' as rules;
+@use 'pages/AboutUs/aboutUs' as aboutUs;
+@use 'pages/Faqs/faqs' as faqs;
+@use "pages/ApartmentsMap/apartmentsMap" as apartmentsMap;
+@use 'pages/NotFound/notFound' as NotFound;
+
+
+@use 'components/Filter/filter.scss' as filter ;
+@use 'components/SortApartment/sortApartment.scss' as sortApartment;
+@use 'components/Catalog/catalog.scss' as catalog ;
+@use 'components/LoadMore/loadMore.scss' as loadMore ;
+@use 'components/Slider/slider.scss' as slider ;
+@use 'components/Mini-slider/miniSlider' as mini-slider ;
+@use 'components/ApartmentRentForm/apartmentRentForm.scss' as apartmentRentForm ;
+@use 'components/AdminBooking/adminBooking.scss' as adminBooking ;
+@use 'components/EmailVerification/emailVerification.scss' as emailVerification ;
+@use "components/CookieConset/cookieConset.scss" as cookieConset ;
+
+.card-apartment {
+  background-color: #fff;
+}
+
+
